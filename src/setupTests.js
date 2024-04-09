@@ -3,3 +3,9 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+
+export const mockEnv = ()=>{
+    return {API_KEY : 'jest value'}
+}
+
+jest.mock('./config', ()=>mockEnv)
